@@ -199,33 +199,52 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      <div className="mx-auto max-w-6xl px-5 pb-20 pt-16 md:pb-28 md:pt-24">
-        <p className="eyebrow text-navy">Website creation studio · Chromepet</p>
-        <h1 className="mt-4 max-w-3xl font-display text-5xl leading-[1.05] tracking-tight md:text-7xl">
-          Websites that make your business{" "}
-          <span className="italic text-navy">look professional</span> — without the agency price.
-        </h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          We are a team of freelancers who build websites the professional way — catalogues,
-          online ordering and payments for bakeries, cake shops, dental clinics and every
-          growing business in the city.
-        </p>
-        <div className="mt-9 flex flex-wrap items-center gap-3">
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-navy-soft"
-          >
-            <WhatsAppIcon className="h-4 w-4" />
-            WhatsApp us — {PHONE_DISPLAY}
-          </a>
-          <a
-            href="#work"
-            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-foreground"
-          >
-            See our work
-          </a>
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-16 md:grid-cols-[1.1fr_0.9fr] md:pb-28 md:pt-24">
+        <div>
+          <p className="eyebrow text-navy">Website creation studio · Chromepet</p>
+          <h1 className="mt-4 max-w-2xl font-display text-5xl leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+            Websites that make your business{" "}
+            <span className="italic text-navy">look professional</span> — without the agency
+            price.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            We are a team of freelancers who build websites the professional way — catalogues,
+            online ordering and payments for bakeries, cake shops, dental clinics and every
+            growing business in the city.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center gap-3">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-navy-soft"
+            >
+              <WhatsAppIcon className="h-4 w-4" />
+              WhatsApp us — {PHONE_DISPLAY}
+            </a>
+            <a
+              href="#work"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-foreground"
+            >
+              See our work
+            </a>
+          </div>
+        </div>
+        <div className="relative hidden md:block">
+          <div className="card-frame overflow-hidden p-2 shadow-xl">
+            <img
+              src={customCakes.url}
+              alt="A bakery website with custom cake ordering built by our studio"
+              className="w-full rounded-xl border border-border object-cover"
+            />
+          </div>
+          <div className="card-frame absolute -bottom-8 -left-10 hidden w-56 overflow-hidden p-1.5 shadow-lg lg:block">
+            <img
+              src={shopCards.url}
+              alt="Online shop product cards with prices"
+              className="w-full rounded-lg border border-border object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
